@@ -28,10 +28,8 @@ The model applies quasi–one–dimensional compressible flow theory, using the 
 - The nozzle geometry is represented by analytical functions for **converging** and **diverging** sections.  
 - The **Mach number** is evaluated by numerically inverting the **area–Mach relation** using MATLAB’s `fzero`.  
 - Pressure and temperature are calculated from the **isentropic flow relations**:  
-  \[
-  T = \frac{T_0}{1 + \frac{\gamma - 1}{2}M^2}, \quad
-  P = \frac{P_0}{(1 + \frac{\gamma - 1}{2}M^2)^{\gamma/(\gamma-1)}}
-  \]
+  `T = T₀ / (1 + (γ - 1)/2 * M²)`  
+  `P = P₀ / (1 + (γ - 1)/2 * M²)^(γ/(γ - 1))`
 - The **mass flow rate** for each nozzle is computed under **choked flow conditions** and multiplied by the number of nozzles in the cluster.
 
 ---
@@ -52,8 +50,8 @@ The model applies quasi–one–dimensional compressible flow theory, using the 
 
 ## Key Concepts Demonstrated
 - Quasi–1D compressible flow modelling  
-- Area–Mach number relation and inversion using `fzero`  
-- Isentropic flow property evaluation  
-- Analytical estimation of choked mass flow rate  
-
+- Computation of Mach number distribution using the area–Mach number relation and numerical root solving (`fzero`)  
+- Isentropic flow property evaluation (pressure and temperature distributions)  
+- Analytical estimation of choked mass flow rate for multi-nozzle clusters  
+ 
 ---
